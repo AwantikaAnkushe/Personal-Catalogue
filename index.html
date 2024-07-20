@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Peas - Basket</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center p-3 border-bottom">
+        <h1 class="text-success">World Peas</h1>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Newsstand</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Who we are</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">My profile</a></li>
+            </ul>
+        </nav>
+        <button class="btn btn-success">Basket (3)</button>
+    </header>
+    <main class="container mt-5">
+        <h2>Basket</h2>
+        <p>3 items</p>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="item d-flex mb-3 p-3 border rounded align-items-center">
+                    <img src="https://via.placeholder.com/100" alt="Heirloom tomato" class="img-thumbnail mr-3">
+                    <div class="details">
+                        <h5>Heirloom tomato</h5>
+                        <p>$5.99 / lb</p>
+                        <div class="input-group">
+                            <input type="number" class="form-control" value="1" min="1">
+                            <div class="input-group-append">
+                                <span class="input-group-text">lb</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-auto">
+                        <p>$5.99</p>
+                    </div>
+                </div>
+                <div class="item d-flex mb-3 p-3 border rounded align-items-center">
+                    <img src="https://via.placeholder.com/100" alt="Organic ginger" class="img-thumbnail mr-3">
+                    <div class="details">
+                        <h5>Organic ginger</h5>
+                        <p>$12.99 / lb</p>
+                        <div class="input-group">
+                            <input type="number" class="form-control" value="0.5" min="0.1" step="0.1">
+                            <div class="input-group-append">
+                                <span class="input-group-text">lb</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-auto">
+                        <p>$6.50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="order-summary p-3 border rounded">
+                    <h5>Order summary</h5>
+                    <p>Subtotal: $27.44</p>
+                    <p>Shipping: $3.99</p>
+                    <p>Tax: $2.00</p>
+                    <h4>Total: $33.43</h4>
+                    <button class="btn btn-success btn-block">Continue to payment</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
