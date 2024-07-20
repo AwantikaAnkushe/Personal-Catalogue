@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav .nav-link {
+    color: black;
+    margin-right: 15px;
+}
+
+main h2 {
+    font-size: 32px;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+}
+
+.order-summary h5 {
+    font-size: 20px;
+}
+
+.order-summary p, .order-summary h4 {
+    margin: 5px 0;
+}
