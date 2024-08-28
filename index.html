@@ -3,76 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Peas - Basket</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Awantika Ankushe</title>
+    <link rel="icon" type="image/x-icon" href="nobg.png">
+    <script src="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/font.min.js"></script>
+    <style>
+        /* @font-face {
+        font-family: 'Geist Mono Medium';
+        src: url('font/statics-otf/GeistMono-Medium.otf');
+        } */
+        body {
+            font-family: monospace;
+            font-weight: 500;
+            font-size: larger;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .main-content {
+            display: flex;
+            gap: 40px;
+        }
+        .content {
+            flex: 2;
+        }
+        .sidebar {
+            flex: 0.70;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1, h2 {
+            margin-top: 0;
+            font-weight: 600;
+        }
+        .button {
+            display: inline-block;
+            background-color: #030202;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #555;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .profile-image {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        .article-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .article-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .article-title {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        .article-title a {
+            color: black;
+            text-decoration: none;
+        }
+        .article-preview {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0;
+        }
+        .read-more {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .topic {
+            background-color: #f0f0f0;
+            color: #100c0c;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            animation: topicAppear 0.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .topic:hover {
+            background-color: #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        @keyframes topicAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .topic:nth-child(1) { animation-delay: 0.1s; }
+        .topic:nth-child(2) { animation-delay: 0.2s; }
+        .topic:nth-child(3) { animation-delay: 0.3s; }
+        .topic:nth-child(4) { animation-delay: 0.4s; }
+        .topic:nth-child(5) { animation-delay: 0.5s; }
+        .topic:nth-child(6) { animation-delay: 0.6s; }
+        .topic:nth-child(7) { animation-delay: 0.7s; }
+        .topic:nth-child(8) { animation-delay: 0.8s; }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .main-content {
+                flex-direction: column;
+            }
+            .sidebar {
+                order: -1;
+            }
+            .profile-image {
+                max-width: 150px;
+                margin: 0 auto 20px;
+            }
+            .intro, .topics-section {
+                text-align: center;
+            }
+            .topics {
+                justify-content: center;
+            }
+            .read-more {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="d-flex justify-content-between align-items-center p-3 border-bottom">
-        <h1 class="text-success">World Peas</h1>
-        <nav>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Newsstand</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Who we are</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">My profile</a></li>
-            </ul>
-        </nav>
-        <button class="btn btn-success">Basket (3)</button>
-    </header>
-    <main class="container mt-5">
-        <h2>Basket</h2>
-        <p>3 items</p>
-        <div class="row">
-            <div class="col-md-8">
-                <div class="item d-flex mb-3 p-3 border rounded align-items-center">
-                    <img src="https://via.placeholder.com/100" alt="Heirloom tomato" class="img-thumbnail mr-3">
-                    <div class="details">
-                        <h5>Heirloom tomato</h5>
-                        <p>$5.99 / lb</p>
-                        <div class="input-group">
-                            <input type="number" class="form-control" value="1" min="1">
-                            <div class="input-group-append">
-                                <span class="input-group-text">lb</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ml-auto">
-                        <p>$5.99</p>
-                    </div>
+    <div class="container">
+        <header class="header">
+            <div class="logo">AW</div>
+            <a href="https://linktr.ee/awantikaankushe" class="button">Contact</a>
+        </header>
+        <div class="main-content">
+            <div class="content">
+                <div class="intro">
+                    <h1>Awantika's Catalogue</h1>
+                    <p>Full-Stack Developer</p>
+                    <p>Web-Tech. Enthusiast | Data Analytics | Java Driven</p>
                 </div>
-                <div class="item d-flex mb-3 p-3 border rounded align-items-center">
-                    <img src="https://via.placeholder.com/100" alt="Organic ginger" class="img-thumbnail mr-3">
-                    <div class="details">
-                        <h5>Organic ginger</h5>
-                        <p>$12.99 / lb</p>
-                        <div class="input-group">
-                            <input type="number" class="form-control" value="0.5" min="0.1" step="0.1">
-                            <div class="input-group-append">
-                                <span class="input-group-text">lb</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ml-auto">
-                        <p>$6.50</p>
-                    </div>
+                <h2>Popular Projects</h2>
+                <ul class="article-list">
+                    <li class="article-item">
+                        <h3 class="article-title"><a href="https://github.com/AwantikaAnkushe/Digital-Banking-Service">"Digital Banking Service" - An Alternate Of Time Consuming Banking Applications </a></h3>
+                        <p class="article-preview">Spearheaded a real time user-friendly online bank application, ensures seamless details of transactions, deposits and withdraw
+                            scripts.Leveraged database for data management, data processing and storage via JDBC.
+                            <br>Used core Java, EclipseV12 (Java EE), Hibernate, REST APIs, Apache Tomcat, JDBC, JSP, CI/CD, JIRA</p>
+                    </li>
+                    <li class="article-item">
+                        <h3 class="article-title"><a href="https://github.com/AwantikaAnkushe/PythonPersuit-Game">"Snake Persuit Game" - Java Driven 2D Game Using Swing(GUI) - An Internship </a></h3>
+                        <p class="article-preview">Demonstrating proficiency in Swing for the GUI and Graphics. Advance programming techniques like Polymorphism, Key Event Handling, Randomization, Collision Detection, Game State Management.
+                            <br>Used Java8, EclipseV9 (Java SE), Swing, AWT, Utilities.</p>
+                    </li>
+                    <li class="article-item">
+                        <h3 class="article-title">"Diabetic Retinopathy Blindness Detection" - Detecting Retinal Blindness Caused By Diabetes(type 1) - A Final Year Project </a></h3>
+                        <p class="article-preview">Aiming 70% -80 % of accuracy in etecting blindness. Where “Classification Supervised Learning” is base center of an application.
+                            <br> To ensure that the user is indeed suffering from blindness, all you require is an "Ophthalmic Image" of the patient's eye. Experiencing intuitive user interface.
+                            <br> Used python V3.12.2, Streamlit V1.33.0, ML Framework – TensorFlow, Keras V3.2.1, VScode.</p>
+                    </li>
+
+                    <!-- <li class="article-item">
+                        <h3 class="article-title"><a href="">Diabetic Retinopathy Blindness Dectection, Using just Medical Images Of An Eyes - A Final Year Project</a></h3>
+                        <p class="article-preview"> Swing, AWT, Utilities.</p>
+                    </li> -->
+
+                </ul>
+                <div class="read-more">
+                    <a href="Awantika's_CV-1.png" class="button">Curriculum vitae(CV) </a>
+                    <!-- <link rel="icon" type="image/x-icon" href="nobg.png"> -->
+
+                    <!-- <a href="page2.html" class="button">Certification and Internships</a> -->
+
                 </div>
+                <!-- <div class="read-more">
+                    <a href="https://medium.com/@anerd" class="button">Certification and Internships</a>
+                </div> -->
             </div>
-            <div class="col-md-4">
-                <div class="order-summary p-3 border rounded">
-                    <h5>Order summary</h5>
-                    <p>Subtotal: $27.44</p>
-                    <p>Shipping: $3.99</p>
-                    <p>Tax: $2.00</p>
-                    <h4>Total: $33.43</h4>
-                    <button class="btn btn-success btn-block">Continue to payment</button>
+            <div class="sidebar">
+                <img src="nobg.png" alt=" profile picture" class="profile-image">
+                <div class="topics-section">
+                    <h2>What's keeping me busy?</h2>
+                    <div class="topics">
+                        <span class="topic">Eclipse</span>
+                        <span class="topic">Web-Tech</span>
+                        <span class="topic">Java Programming</span>
+                        <span class="topic">Data Analytics</span>
+                        <span class="topic">Kafka</span>
+                        <span class="topic">Medium</span>
+                        <span class="topic">DSA</span>
+                        <span class="topic">JIRA</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
